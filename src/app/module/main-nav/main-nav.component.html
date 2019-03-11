@@ -1,0 +1,48 @@
+<div class="menu-container box-shadow">
+  <div class="row margin-side-0">
+    <div class="col-sm-2 align-self-center">
+      <button mat-button [matMenuTriggerFor]="animals">
+        <i class="fas fa-th"></i>
+        <span class="margin-left-3"> Categories</span>
+      </button>
+    </div>
+
+    <div class="col-sm-10">
+      <mat-form-field>
+        <input matInput placeholder="Search Category">
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+
+
+<mat-menu #animals="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="development">Development</button>
+  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Photography</button>
+</mat-menu>
+
+<mat-menu #development="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="programmingLanguage">Programming Language</button>
+  <button mat-menu-item [matMenuTriggerFor]="database">Database</button>
+  <button mat-menu-item [matMenuTriggerFor]="sofwareTesting">Sofware Testing</button>
+  <button mat-menu-item>Network</button>
+</mat-menu>
+
+<mat-menu #programmingLanguage="matMenu">
+  <button mat-menu-item>Java</button>
+  <button mat-menu-item>JavaScript</button>
+  <button mat-menu-item>Go</button>
+</mat-menu>
+
+<mat-menu #database="matMenu">
+  <button mat-menu-item>SQL</button>
+  <button mat-menu-item>MongoDB</button>
+  <button mat-menu-item>Apache Kafka</button>
+</mat-menu>
+
+
+<mat-menu #sofwareTesting="matMenu">
+  <button mat-menu-item>Katalon</button>
+  <button mat-menu-item>Automated Test</button>
+  <button mat-menu-item>TDD</button>
+</mat-menu>
